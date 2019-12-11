@@ -1,26 +1,31 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display:false
+    }
+  }
+  render() { 
+    return (<div>
+        <ul className="head">
+          <li>Home</li>
+          <ul onClick={()=> this.setState({display:!this.state.display})} className="serv">Services
+            <div className={this.state.display ? 'display':"hide"}>
+            <li>For enterpreneurs</li>
+            <li>For students</li>
+            <li>For hobbyists</li>
+            </div>
+          </ul>
+          <li className="contact">Contact</li>
+        </ul>
+    </div>  );
+  }
 }
-
+ 
 export default App;
+
+
+

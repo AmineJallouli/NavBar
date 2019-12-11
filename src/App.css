@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.display{
+  display: block;
+  margin-top: 15px;
+}
+
+.hide{
+  display:none;
+}
+
+li{
+  list-style-type: none;
+}
+
+ul{
+  display: flex;
+}
+
+.serv:hover{
+  cursor: pointer;
+}
+
+.contact {
+  margin-left:30px
+}
+
+.head{
+  background-color: #282c34;
+  color: white;
+}
